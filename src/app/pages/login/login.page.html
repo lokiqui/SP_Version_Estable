@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Sky Practice - Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-auth-form #loginForm (formSubmitted)="loginUser($event)" [actionButtonText]="'Login'"></app-auth-form>
+
+  <ion-button expand="block" fill="clear" routerLink="/signup">
+    Crea una cuenta nueva
+  </ion-button>
+
+  <ion-button expand="block" fill="clear" routerLink="/reset-password">
+    Olvidé mi contraseña :(
+  </ion-button>
+</ion-content>

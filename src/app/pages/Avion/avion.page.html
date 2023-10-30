@@ -1,0 +1,114 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Aviones y Simuladores </ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-back-button slot="start"></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <h1>Formulario de Aviones</h1>
+  <ion-card>
+    <ion-item>
+      <ion-label>Tipo </ion-label>
+      <ion-item>
+        <ion-select label="Default label" placeholder="Tipo">
+          <ion-select-option value="Avion">Avion</ion-select-option>
+          <ion-select-option value="Simulador">Simulador</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Fabricante </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Modelo </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Patente </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Activo </ion-label>
+      <ion-item>
+        <ion-select label="Default label" placeholder="Activo">
+          <ion-select-option value="Si">Si</ion-select-option>
+          <ion-select-option value="No">No</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Estado </ion-label>
+      <ion-item>
+        <ion-select label="Default label" placeholder="Estado">
+          <ion-select-option value="Decomisionado">Decomisionado</ion-select-option>
+          <ion-select-option value="Mantenimiento">Mantenimiento</ion-select-option>
+          <ion-select-option value="Operativo">Operativo</ion-select-option>
+          <ion-select-option value="Perdido">Perdido</ion-select-option>
+          <ion-select-option value="Revision Tecnica"> Revision Tecnica</ion-select-option>
+          <ion-select-option value="Robado">Robado</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Costo de Uso </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-label>Fecha de Compra</ion-label>
+      <ion-datetime presentation="date" [(ngModel)]="Fecha_Compra"></ion-datetime>
+      <ion-button (click)="openDateTimePicker()" expand="full">Seleccionar Fecha</ion-button>
+    </ion-item>
+    </ion-card>
+
+    <!-- Con el siguente codigo deberia quedar la fecha pero no se muestra bien -->
+
+    <!-- <ion-datetime-button datetime="datetime"></ion-datetime-button>
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime id="datetime"></ion-datetime>
+  </ng-template>
+</ion-modal>  -->
+
+
+  <ion-card>
+    <ion-item>
+      <ion-label>Fecha de Baja Proyectada </ion-label>
+      <ion-datetime presentation="date" [(ngModel)]="Fecha_Baja_Proyectada"> </ion-datetime>
+      <ion-button (click)="openDateTimePicker()" expand="full">Seleccionar Fecha</ion-button>
+    </ion-item>
+  </ion-card>
+
+    <!-- Con el siguente codigo deberia quedar la fecha pero no se muestra bien -->
+
+    <!-- <ion-datetime-button datetime="datetime"></ion-datetime-button>
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime id="datetime"></ion-datetime>
+  </ng-template>
+</ion-modal>  -->
+  
+
+  
+  <ion-button>Guardar</ion-button>
+  <ion-button>Modificar</ion-button>
+  <ion-button>Eliminar</ion-button>
+</ion-content>
+

@@ -1,0 +1,148 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Página de perfil</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logOut()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header> Informacion personal </ion-list-header>
+  </ion-list>
+  <ion-item (click)="updateName()">
+    <ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="text-left" size="5"> Nombre </ion-col>
+          <ion-col class="text-center" size="7" *ngIf="(userProfile$ | async )?.Nombre">
+            {{(userProfile$ | async )?.Nombre}}
+          </ion-col>
+          <ion-col size="7" class="placeholder-profile text-center" *ngIf="!(userProfile$ | async )?.Nombre">
+            <span> Nombre </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+
+  <ion-item (click)="updateApellido()">
+    <ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="text-left" size="5"> Apellido </ion-col>
+          <ion-col class="text-center" size="7" *ngIf="(userProfile$ | async )?.Apellido">
+            {{(userProfile$ | async )?.Apellido}}
+          </ion-col>
+          <ion-col size="7" class="placeholder-profile text-center" *ngIf="!(userProfile$ | async )?.Apellido">
+            <span> Apellido</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+
+  <ion-item (click)="updateDNI()">
+    <ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="text-left" size="5"> DNI </ion-col>
+          <ion-col class="text-center" size="7" *ngIf="(userProfile$ | async )?.DNI">
+            {{(userProfile$ | async )?.DNI}}
+          </ion-col>
+          <ion-col size="7" class="placeholder-profile text-center" *ngIf="!(userProfile$ | async )?.DNI">
+            <span> DNI</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+  
+  <ion-item (click)="updateNacimiento()">
+    <ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="text-left" size="5"> Fecha de Nacimiento </ion-col>
+          <ion-col class="text-center" size="7" *ngIf="(userProfile$ | async )?.Fecha_Nacimiento">
+            {{(userProfile$ | async )?.Fecha_Nacimiento}}
+          </ion-col>
+          <ion-col size="7" class="placeholder-profile text-center" *ngIf="!(userProfile$ | async )?.Fecha_Nacimiento">
+            <span> DD/MM/AAAA</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+
+<ion-item (click)="updateSexo()">
+  <ion-label>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="text-left" size="5"> Sexo </ion-col>
+        <ion-col class="text-center" size="7" *ngIf="(userProfile$ | async )?.Sexo">
+          {{(userProfile$ | async )?.Sexo}}
+        </ion-col>
+        <ion-col size="7" class="placeholder-profile text-center" *ngIf="!(userProfile$ | async )?.Sexo">
+          <span> Sexo</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-label>
+</ion-item>
+
+<ion-item (click)="updateNacionalidad()">
+  <ion-label>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="text-left" size="5"> Nacionalidad </ion-col>
+        <ion-col class="text-center" size="7" *ngIf="(userProfile$ | async )?.Nacionalidad">
+          {{(userProfile$ | async )?.Nacionalidad}}
+        </ion-col>
+        <ion-col size="7" class="placeholder-profile text-center" *ngIf="!(userProfile$ | async )?.Nacionalidad">
+          <span> Nacionalidad</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-label>
+</ion-item>
+
+  <ion-item (click)="updateEmail()">
+    <ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="text-left" size="5"> Email </ion-col>
+          <ion-col class="text-center" size="7" *ngIf="(userProfile$ | async )?.email">
+            {{(userProfile$ | async )?.email}}
+          </ion-col>
+          <ion-col size="7" class="placeholder-profile text-center" *ngIf="!(userProfile$ | async )?.email">
+            <span> email </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+
+  <ion-item (click)="updatePassword()">
+    <ion-label>
+      <ion-grid>
+        <ion-row>
+          <ion-col class="text-left" size="5"> Password </ion-col>
+          <ion-col class="text-center" size="7" class="placeholder-profile">
+            <span> Nuevo password. </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-label>
+  </ion-item>
+  
+
+</ion-content>
